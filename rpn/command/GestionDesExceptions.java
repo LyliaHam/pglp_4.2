@@ -1,44 +1,23 @@
-package command;
-import java.util.Stack;
+package rpn;
 
-import rpn.GestionDesExceptions;
-import rpn.OperationC;
+import rpn.exc.ArgumentPileException;
+import rpn.exc.MinMaxException;
 
-public class OperationC implements UndoableC {
-
-	private double dernier;
-	private double avantDernier;
-	private Operation op;
-	private Stack<Double> pile;
+public class GestionDesExceptions {
 	
-	public OperationC(Stack<Double> pile, Operation ope) {
-		ExceptionHandler.handleStackSize(pile.size(), 2);
-		this.pile = pile;
-		this.operation = operation;
-	}
-
-	@Override
-	public void application() {
-		double res;
-		this.dernier = this.pile.pop();
-		this.avantDernier = this.pile.pop();
-		try {
-			result = operation.eval(avantDernier, dernier);
-			GestionDesExceptions.handleMinMax(result);
-			this.pile.push(result);
-		}
-		catch (ArithmeticException ex) {
-			this.pile.push(avantDernier);
-			this.pile.push(dernier);
-			throw ex;
+	private static final double MIN_VALUE = 100000;
+	private static final double MAX_VALUE = 100000;
+	
+	public static void gestionMinMax(double nb) {
+		if(nb > MAX_VALUE || nb < -MIN_VALUE) {
+			throw new MinMaxException();
 		}
 	}
 	
-	@Override
-	public void annule() {
-		this.pile.pop();
-		this.pile.push(avantDernier);
-		this.pile.push(dernier);
+	public static void gestionTaillePile (int taille, int tailleExp) {
+		if(taille < tailleExp) {
+			throw new ArgumentPileException();
+		}
 	}
 
 }

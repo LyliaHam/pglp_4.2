@@ -1,4 +1,3 @@
-
 public class QuitC implements Command {
 	
 	private Switch stop;
