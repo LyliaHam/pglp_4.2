@@ -13,13 +13,13 @@ public class NbCommand implements UndoableC {
 		this.compteur = compteur;		
 	}
 	
-	@Override
+
 	public void application() {
 		GestionDesExceptions.gestionMinMax(compteur);
 		this.nb.push(compteur);
 	}
 	
-	@Override
+	
 	public void annule() {
 		this.nb.pop();
 	}

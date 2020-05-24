@@ -1,7 +1,7 @@
 package rpn;
 
-import rpn.exc.ArgumentPileException;
-import rpn.exc.MinMaxException;
+import rpn.exceptions.ArgumentPileException;
+import rpn.exceptions.MinMaxException;
 
 public class GestionDesExceptions {
 	
