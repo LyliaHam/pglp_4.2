@@ -1,0 +1,11 @@
+#Sun May 24 21:58:52 CEST 2020
+module-resource*?\:checkstyle-suppressions.xml=B9F5175F799374E5ACFC4DB9D90C91FFEEF4E0A9
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/exceptions/ErreurSaisieException.java=1590350174000
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/exceptions/ArgumentPileException.java=1590350174000
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/exceptions/MinMaxException.java=1590350174000
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/command/NbCommand.java=1590350174000
+configuration*?=4B3032984AEF4465E81B715FEB587AD7967302DF
+module-resource*?\:checkstyle-xpath-suppressions.xml=453DCAB6BEF53727A43969F52BDCF753ABA13E0F
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/exceptions/NombreOperationsException.java=1590350174000
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/command/Annulable.java=1590350174000
+/home/user/Bureau/pglp_4.2/pglp/src/main/java/lylia/command/QuitC.java=1590350174000
